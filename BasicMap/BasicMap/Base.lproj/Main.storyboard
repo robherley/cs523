@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-Ij-OIm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xvt-Zp-TtM">
+                                <rect key="frame" x="20" y="59" width="141" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchLayer:" destination="BYZ-38-t0r" eventType="valueChanged" id="bE1-ws-gMx"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z0-4U-mDE">
+                                <rect key="frame" x="364" y="59" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="📌"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWs-j8-STM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrz-oQ-Qvt">
+                                <rect key="frame" x="340" y="692" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Fon-90-ema"/>
+                                    <constraint firstAttribute="height" constant="50" id="lfW-lR-GcJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <state key="normal" title="+"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="zoomView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAY-sD-Oxl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3E-ME-lgm">
+                                <rect key="frame" x="340" y="760" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TsY-N8-Yl2"/>
+                                    <constraint firstAttribute="width" constant="50" id="blf-6J-t4P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <state key="normal" title="-"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="zoomView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9S1-at-wqa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xvt-Zp-TtM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="42f-Th-D7E"/>
+                            <constraint firstItem="Vrz-oQ-Qvt" firstAttribute="trailing" secondItem="b3E-ME-lgm" secondAttribute="trailing" id="BPy-Xw-SFL"/>
+                            <constraint firstItem="Vrz-oQ-Qvt" firstAttribute="leading" secondItem="b3E-ME-lgm" secondAttribute="leading" id="GYk-VW-C2S"/>
+                            <constraint firstItem="xvt-Zp-TtM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JvM-YA-zRe"/>
+                            <constraint firstItem="hvo-Ij-OIm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="M7H-fu-XEh"/>
+                            <constraint firstItem="hvo-Ij-OIm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PEQ-XO-y44"/>
+                            <constraint firstItem="hvo-Ij-OIm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bpw-tx-TEN"/>
+                            <constraint firstItem="b3E-ME-lgm" firstAttribute="top" secondItem="Vrz-oQ-Qvt" secondAttribute="bottom" constant="18" id="dFX-iO-5p2"/>
+                            <constraint firstAttribute="trailing" secondItem="hvo-Ij-OIm" secondAttribute="trailing" id="gUL-mJ-gYv"/>
+                            <constraint firstItem="8z0-4U-mDE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="j2V-k1-nQz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vrz-oQ-Qvt" secondAttribute="trailing" constant="24" id="mxg-wb-LTN"/>
+                            <constraint firstItem="xvt-Zp-TtM" firstAttribute="top" secondItem="8z0-4U-mDE" secondAttribute="top" id="qTN-vH-3AR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b3E-ME-lgm" secondAttribute="bottom" constant="52" id="ud8-PK-udT"/>
+                            <constraint firstItem="Vrz-oQ-Qvt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="340" id="z6S-hV-beD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="hvo-Ij-OIm" id="vP7-Hk-tJJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
