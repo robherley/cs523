@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WineCoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zBz-Vj-Ocx">
+                                <rect key="frame" x="26" y="30" width="323" height="397"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcohol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcN-k1-CJm">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="10" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="8gO-l4-1Qg">
+                                        <rect key="frame" x="-2" y="26" width="327" height="31"/>
+                                        <color key="tintColor" red="0.63662713770000001" green="0.74856311080000004" blue="0.54056692120000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="movedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="hEq-d0-xfL"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Malic Acid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-ty-Yy9">
+                                        <rect key="frame" x="0.0" y="61" width="323" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="OBC-Y3-WD3">
+                                        <rect key="frame" x="-2" y="87" width="327" height="31"/>
+                                        <color key="tintColor" red="0.63662713770000001" green="0.74856311080000004" blue="0.54056692120000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="movedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="IhI-Ff-rsN"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-zZ-PlK">
+                                        <rect key="frame" x="0.0" y="122" width="323" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="1.5" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="wq2-ia-wrt">
+                                        <rect key="frame" x="-2" y="148" width="327" height="31"/>
+                                        <color key="tintColor" red="0.63662713770000001" green="0.74856311080000004" blue="0.54056692120000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="movedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="G0P-KZ-b0w"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alkalinity Ash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB7-fa-vQV">
+                                        <rect key="frame" x="0.0" y="183" width="323" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="10" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="w8h-Cc-o2R">
+                                        <rect key="frame" x="-2" y="209" width="327" height="31"/>
+                                        <color key="tintColor" red="0.63662713770000001" green="0.74856311080000004" blue="0.54056692120000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="movedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="GIE-FS-06P"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magnesium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hea-04-yBX">
+                                        <rect key="frame" x="0.0" y="244" width="323" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="70" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="f17-wF-40K">
+                                        <rect key="frame" x="-2" y="270" width="327" height="31"/>
+                                        <color key="tintColor" red="0.63662713770000001" green="0.74856311080000004" blue="0.54056692120000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="movedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="igM-9u-i2n"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Phenols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMX-cT-bWj">
+                                        <rect key="frame" x="0.0" y="305" width="323" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="Mr0-BQ-YSD">
+                                        <rect key="frame" x="-2" y="331" width="327" height="31"/>
+                                        <color key="tintColor" red="0.63662713770000001" green="0.74856311080000004" blue="0.54056692120000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="movedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ijy-9v-ra7"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cultivar 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1T-vS-keZ">
+                                        <rect key="frame" x="0.0" y="366" width="323" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17950707669999999" green="0.2030345798" blue="0.2528765798" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zBz-Vj-Ocx" secondAttribute="trailing" constant="10" id="Eby-6v-pbj"/>
+                            <constraint firstItem="zBz-Vj-Ocx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="LbR-of-kuu"/>
+                            <constraint firstItem="zBz-Vj-Ocx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="oPe-ZQ-8wY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cultivarLabel" destination="V1T-vS-keZ" id="JTV-0A-2Hn"/>
+                        <outlet property="stackView" destination="zBz-Vj-Ocx" id="R6d-n6-Tba"/>
+                        <outletCollection property="labels" destination="tcN-k1-CJm" collectionClass="NSMutableArray" id="w8z-CJ-fFn"/>
+                        <outletCollection property="labels" destination="aRg-ty-Yy9" collectionClass="NSMutableArray" id="HgN-JU-IyI"/>
+                        <outletCollection property="labels" destination="2cp-zZ-PlK" collectionClass="NSMutableArray" id="6Gm-cN-dkT"/>
+                        <outletCollection property="labels" destination="BB7-fa-vQV" collectionClass="NSMutableArray" id="8Mf-p6-q0f"/>
+                        <outletCollection property="labels" destination="hea-04-yBX" collectionClass="NSMutableArray" id="AHm-V5-Kxs"/>
+                        <outletCollection property="labels" destination="JMX-cT-bWj" collectionClass="NSMutableArray" id="Ax5-e9-apU"/>
+                        <outletCollection property="sliders" destination="8gO-l4-1Qg" collectionClass="NSMutableArray" id="v1U-Bx-1oZ"/>
+                        <outletCollection property="sliders" destination="OBC-Y3-WD3" collectionClass="NSMutableArray" id="yFq-hi-hmS"/>
+                        <outletCollection property="sliders" destination="wq2-ia-wrt" collectionClass="NSMutableArray" id="7Qj-vV-oty"/>
+                        <outletCollection property="sliders" destination="w8h-Cc-o2R" collectionClass="NSMutableArray" id="uyb-7y-xLN"/>
+                        <outletCollection property="sliders" destination="f17-wF-40K" collectionClass="NSMutableArray" id="Gow-rd-UEa"/>
+                        <outletCollection property="sliders" destination="Mr0-BQ-YSD" collectionClass="NSMutableArray" id="yTO-vb-fT3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
